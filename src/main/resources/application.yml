@@ -1,0 +1,9 @@
+logger:
+  levels:
+    ROOT: INFO
+micronaut:
+  application:
+    name: demo
+grpc:
+  server:
+    port: 9090
