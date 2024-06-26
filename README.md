@@ -12,9 +12,6 @@ Micronaut as the gRPC backend server.
 ./mvnw clean compile exec:exec:grpc-web-proxy exec:exec
 ```
 
-
-## Running 
-
 ## Generating TypeScript Client Code
 
 1. Install protoc compiler
