@@ -9,7 +9,7 @@ Micronaut as the gRPC backend server.
 ## Running application locally
 
 ```shell
-./mvnw clean compile exec:exec:grpc-web-proxy exec:exec
+./mvnw clean compile exec:exec@grpc-web-proxy exec:exec
 ```
 
 ## Generating TypeScript Client Code
