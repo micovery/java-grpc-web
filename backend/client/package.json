@@ -1,0 +1,25 @@
+{
+  "name": "demo-client-ts",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "npx protoc --ts_out ./src/generated --proto_path ../proto ../proto/demo.proto",
+    "build": "npm run generate && npx tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@protobuf-ts/plugin": "^2.9.4",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@protobuf-ts/grpcweb-transport": "^2.9.4",
+    "@protobuf-ts/runtime-rpc": "^2.9.4"
+  },
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ]
+}

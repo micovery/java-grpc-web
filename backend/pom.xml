@@ -166,11 +166,11 @@
           <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.64.0:exe:${os.detected.name}-x86_64</pluginArtifact>
 
           <protoSourceRoot>${basedir}/proto</protoSourceRoot>
-          <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
+          <outputDirectory>${basedir}/generated-src</outputDirectory>
 
           <writeDescriptorSet>true</writeDescriptorSet>
           <descriptorSetFileName>demo.pb</descriptorSetFileName>
-          <descriptorSetOutputDirectory>${project.build.directory}/proxy/pb</descriptorSetOutputDirectory>
+          <descriptorSetOutputDirectory>${basedir}/proxy/generated/pb</descriptorSetOutputDirectory>
           <clearOutputDirectory>false</clearOutputDirectory>
         </configuration>
         <executions>
