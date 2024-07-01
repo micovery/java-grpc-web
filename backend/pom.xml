@@ -76,9 +76,6 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
-
-
-
     <dependency>
       <groupId>io.grpc</groupId>
       <artifactId>protoc-gen-grpc-java</artifactId>
@@ -111,7 +108,11 @@
       <artifactId>javax.inject</artifactId>
       <version>1</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.google.api.grpc</groupId>
+      <artifactId>proto-google-common-protos</artifactId>
+      <version>2.41.0</version>
+    </dependency>
   </dependencies>
   <build>
     <extensions>
@@ -169,6 +170,7 @@
           <outputDirectory>${basedir}/generated-src</outputDirectory>
 
           <writeDescriptorSet>true</writeDescriptorSet>
+          <includeDependenciesInDescriptorSet>true</includeDependenciesInDescriptorSet>
           <descriptorSetFileName>demo.pb</descriptorSetFileName>
           <descriptorSetOutputDirectory>${basedir}/proxy/generated/pb</descriptorSetOutputDirectory>
           <clearOutputDirectory>false</clearOutputDirectory>
@@ -225,10 +227,11 @@
               <goal>exec</goal>
             </goals>
             <configuration>
+              <workingDirectory>${project.build.directory}/proxy</workingDirectory>
               <executable>envoy</executable>
               <async>true</async>
               <asyncDestroyOnShutdown>true</asyncDestroyOnShutdown>
-              <commandlineArgs>-c ${project.build.directory}/proxy/envoy-config.yaml</commandlineArgs>
+              <commandlineArgs>-c ./envoy-config.yaml</commandlineArgs>
             </configuration>
           </execution>
         </executions>

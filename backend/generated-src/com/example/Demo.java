@@ -38,18 +38,20 @@ public final class Demo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ndemo.proto\022\013com.example\"\007\n\005Empty\"!\n\016Se" +
-      "ndMessageReq\022\017\n\007message\030\001 \001(\t\"\"\n\016GetMess" +
-      "agesRes\022\020\n\010messages\030\001 \003(\t2\221\001\n\013DemoServic" +
-      "e\022@\n\013sendMessage\022\033.com.example.SendMessa" +
-      "geReq\032\022.com.example.Empty\"\000\022@\n\013getMessag" +
-      "es\022\022.com.example.Empty\032\033.com.example.Get" +
-      "MessagesRes\"\000B\025\n\013com.exampleB\004DemoP\001b\006pr" +
-      "oto3"
+      "\n\ndemo.proto\022\013com.example\032\034google/api/an" +
+      "notations.proto\"\007\n\005Empty\"!\n\016SendMessageR" +
+      "eq\022\017\n\007message\030\001 \001(\t\"\"\n\016GetMessagesRes\022\020\n" +
+      "\010messages\030\001 \003(\t2\262\001\n\013DemoService\022P\n\013sendM" +
+      "essage\022\033.com.example.SendMessageReq\032\022.co" +
+      "m.example.Empty\"\020\202\323\344\223\002\n\"\010/message\022Q\n\013get" +
+      "Messages\022\022.com.example.Empty\032\033.com.examp" +
+      "le.GetMessagesRes\"\021\202\323\344\223\002\013\022\t/messagesB\025\n\013" +
+      "com.exampleB\004DemoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_com_example_Empty_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -69,6 +71,12 @@ public final class Demo {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_example_GetMessagesRes_descriptor,
         new java.lang.String[] { "Messages", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

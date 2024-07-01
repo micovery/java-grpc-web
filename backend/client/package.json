@@ -2,8 +2,8 @@
   "name": "demo-client-ts",
   "version": "1.0.0",
   "scripts": {
-    "generate": "npx protoc --ts_out ./src/generated --proto_path ../proto ../proto/demo.proto",
-    "build": "npm run generate && npx tsc"
+    "generate-sources": "npx protoc --ts_out ./src/generated --proto_path ../proto ../proto/demo.proto",
+    "build": "npm run generate-sources && npx tsc"
   },
   "author": "",
   "license": "ISC",
